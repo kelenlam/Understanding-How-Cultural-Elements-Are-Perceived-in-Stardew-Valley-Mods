@@ -2,7 +2,7 @@
 
 1.Install Python 3.10.11 https://www.python.org/downloads/release/python-31011/ 
 
-2.Download final.zip from Git Hub and extract it. 
+2.Download zip from Git Hub and extract it. 
 
 3.Install MongoDB compass https://www.mongodb.com/try/download/community During installation, set up final/mongodb_data and final/mongodb_log as MongoDB data and log directories. 
 
@@ -16,7 +16,7 @@
 
 8.If the Chrome version is not compatible with Chrome driver 134.0.6998.165, download the latest Chrome driver and replace chromedriver.exe in the final. https://googlechromelabs.github.io/chrome-for-testing/ 
 
-9.In final folder, run: python setup.py 
+9.In the folder root, run: python setup.py 
 
 10.According to the instructions printed after running setup.py, activate the virtual environment and set the path. 
 
@@ -28,4 +28,4 @@
 
 2.Start Redis with cmd, run: 1. wsl 2.sudo service redis-server start 
 
-3.In final folder, activate the virtual environment, then run: uvicorn backend.main:app --reload
+3.In the folder root, activate the virtual environment, then run: uvicorn backend.main:app --reload
