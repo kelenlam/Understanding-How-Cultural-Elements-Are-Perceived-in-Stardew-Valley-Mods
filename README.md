@@ -1,4 +1,4 @@
-#Setup 
+# Setup
 
 1.Install Python 3.10.11 https://www.python.org/downloads/release/python-31011/ 
 
@@ -22,7 +22,7 @@
 
 
 
-#Demo 
+# Demo
 
 1.Start MongoDB with administrator privilege cmd, run: net start MongoDB 
 
