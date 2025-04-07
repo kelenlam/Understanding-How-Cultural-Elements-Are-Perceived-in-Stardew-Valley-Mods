@@ -1,0 +1,88 @@
+/* frontend/static/css/style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color:#a3eef0;
+}
+
+.chat-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.chat-header {
+    font-family: "Press Start 2P", monospace;
+    font-size: 25;
+    line-height: 1.5;
+    padding: 20px;
+    background: linear-gradient(#0665c0, #81fce0);
+    color: #f5c215;
+    text-shadow:
+        -1px -1px 0 #000000,
+         1px -1px 0 #000000,
+        -1px  1px 0 #000000,
+         1px  1px 0 #000000;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+
+.chat-messages {
+    height: 400px;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 70%;
+}
+
+.user-message {
+    background: #f5b666;
+    color: #62210c;
+    margin-left: auto;
+    border: 4px solid #c36617; /* Black border */
+    border-radius: 0;
+    width: fit-content
+}
+
+.bot-message {
+    background: #f5b666;
+    color: #62210c;
+    border: 4px solid #c36617; /* Black border */
+    border-radius: 0;
+}
+
+.chat-input {
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background: #e49e05;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e49e05;
+}
+
