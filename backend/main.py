@@ -264,7 +264,7 @@ def generate_response(analysis_result: Dict) -> str:
     response = (
         f"Based on my analysis of {(analysis_result['crawled_no'])} sources on {(analysis_result['original_message'])}, "
         f"here's what I found:\n\n"
-        f"Synonyms: {', '.join(analysis_result['synonyms'])}\n\n"
+        f"Synonyms and related words: {', '.join(analysis_result['synonyms'])}\n\n"
         f"\n{summary_text}\n"
         f"\n Please input another cultural elements to explore.\n"
     )
