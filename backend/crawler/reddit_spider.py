@@ -55,15 +55,21 @@ class RedditSpider(BaseSpider):
         except:
             print("This mod has comments. Continuing to scrape comments.")
 
-        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, ".text-neutral-content")))
-        text_body = self.driver.find_element(By.CSS_SELECTOR, ".text-neutral-content p")
-        comments.append(text_body.text) # Add the text body to the comments
+        try:
+            WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, ".text-neutral-content")))
+            text_body = self.driver.find_element(By.CSS_SELECTOR, ".text-neutral-content p")
+            comments.append(text_body.text) # Add the text body to the comments
+        except:
+            print("No text body found.")
 
-        sel = Selector(text=self.driver.page_source)
-        cms = sel.css('[slot="comment"]')
-        for cm in cms[:max_cm]:
-            comment_string = cm.xpath('string()').get().strip()
-            comments.append(comment_string) # Add the comment to the comments list
+        try:
+            sel = Selector(text=self.driver.page_source)
+            cms = sel.css('[slot="comment"]')
+            for cm in cms[:max_cm]:
+                comment_string = cm.xpath('string()').get().strip()
+                comments.append(comment_string) # Add the comment to the comments list
+        except:
+            print("No comments found.")
 
         formatted_comments = ' '.join(comments)
         return {"Mod title": mod_name, "Comments": formatted_comments}
